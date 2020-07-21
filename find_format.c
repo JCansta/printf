@@ -9,7 +9,7 @@ int (*find_format(const char *c))()
     {"c", fo_char},
     {"s", fo_string},
     {"%", fo_unable},
-    {"d", fo_double},
+    {"d", fo_integer},
     {"i", fo_integer},
     {NULL, NULL}
     };
