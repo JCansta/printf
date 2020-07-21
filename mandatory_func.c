@@ -23,12 +23,10 @@ int fo_string(va_list arg)
 
 int fo_unable(va_list arg)
 {
+	char *u = "%";
 	(void)arg;
-	char u;
-	int resul2;
-	u = '%';
-	resul2 = write(1, &u, 1);
-	return (resul2);  
+	write(1, &u[0], 1);
+	return (1);
 }
 
 int fo_integer(va_list arg)
