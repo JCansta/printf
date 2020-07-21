@@ -1,0 +1,20 @@
+.TH man 2 "21 JULY 2020" "0.32" "Printf man page"
+.SH NAME
+.B Printf
+- Print data format.
+.SH SYNOPSIS
+  [Library] #include <stdio.h>, #include <stdarg.h>
+  [Syntaxis] int printf(const char *format, ...).
+.SH DESCRIPTION
+the function printf produce a output to stdout according to the format as recibed, can print any word and numbers. Printf works by taking the first argument: a string, that contains characters and each one its printed exactly as its appear, when it finds the percent character, know as a format specification, goes to the next argument and uses its value, printing according to the format specification.
+There are some special characters that can affect the next characters depending of certain rules.
+.SH Return
+if the return its succesful the function return the number of characters printed except the null byte.
+.SH Format of the format string
+Is a character string that has literal characters and other elements that can be printed exactly as it appears. This format its composed by zero and more directives like ordinary characters with out the "%" that will print like they are; and the conversion specifications tha are introduced by the character "%" and ends with a conversion specifier (letter that activate the conversion).
+.SH SEE ALSO
+.printf(1), printf(3), stdarg(3).
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Mauricio Contreras, Jaime Castro
