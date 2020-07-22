@@ -14,23 +14,23 @@ char *convert(int num, int base)
 	char sign = 0;
 	char *ptr;
 	unsigned int n = num;
+
 	if (num < 0)
-        {
-                n = -num;
-                sign = '-';
-        }
-        ptr = &buffer[49];
-        *ptr = '\0';
+	{
+		n = -num;
+		sign = '-';
+	}
+	ptr = &buffer[49];
+	*ptr = '\0';
 
-        do
-        {
-                *--ptr = array[n % base];
-                n /= base;
-        } while (n != 0);
+	do {
+		*--ptr = array[n % base];
+		n /= base;
+	} while (n != 0);
 
-        if (sign)
-        {
-                *--ptr = sign;
-        }
-        return (ptr);
+	if (sign)
+	{
+		*--ptr = sign;
+	}
+	return (ptr);
 }
