@@ -90,3 +90,15 @@ int fo_hexahigh(va_list arg)
 
 	return (count);
 }
+
+/**
+ *fo_pointer - print the address of a file
+ *@arg: the parameter to be printed
+ *Return: the number of characters printed
+ */
+int fo_pointer(va_list arg)
+{
+	(void)arg;
+
+	return (0);
+}

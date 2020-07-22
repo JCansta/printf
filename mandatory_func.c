@@ -12,6 +12,8 @@ int fo_char(va_list arg)
 	int resul;
 
 	c = va_arg(arg, int);
+	if (c == 0)
+		return(0);
 	resul = write(1, &c, 1);
 	return (resul);
 }
@@ -29,6 +31,8 @@ int fo_string(va_list arg)
 
 	s = va_arg(arg, char *);
 
+	if(s == NULL)
+		return (0);
 	for (count = 0; s[count] != '\0'; count++)
 		write(1, &s[count], 1);
 

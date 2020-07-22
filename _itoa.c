@@ -7,7 +7,7 @@
  * Return: string
  * credits to Farrukh Akhrarov "narnat" for the function itoa
  */
-char *convert(int num, int base)
+char *convert(long int num, int base)
 {
 	static char *array = "0123456789abcdef";
 	static char buffer[50];

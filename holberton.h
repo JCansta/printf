@@ -27,10 +27,15 @@ int fo_unable(va_list arg);
 int fo_double(va_list arg);
 int fo_integer(va_list arg);
 int fo_binari(va_list arg);
+
 int fo_unsigned(va_list arg);
 int fo_octal(va_list arg);
 int fo_hexalow(va_list arg);
 int fo_hexahigh(va_list arg);
+int fo_pointer(va_list arg);
+
+int fo_reverse(va_list arg);
+int fo_rot13(va_list arg);
 char *convert(long int num, int base);
 
 

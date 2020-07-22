@@ -22,6 +22,9 @@ int (*find_format(const char *c))(va_list)
 		{"o", fo_octal},
 		{"x", fo_hexalow},
 		{"X", fo_hexahigh},
+		{"p", fo_pointer},
+		{"r", fo_reverse},
+		{"R", fo_rot13},
 		{NULL, NULL}
 	};
 	int i = 0;
