@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] != '%')
+			if (format[i + 1] != '\0')
 			{
 				fofu = (*find_format)(&format[i + 1]);
 				if (fofu != NULL)

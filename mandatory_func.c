@@ -13,7 +13,10 @@ int fo_char(va_list arg)
 
 	c = va_arg(arg, int);
 	if (c == '\0')
+	{
+		write(1, "", 1);
 		return (0);
+	}
 	resul = write(1, &c, 1);
 	return (resul);
 }
