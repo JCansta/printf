@@ -36,6 +36,7 @@ int fo_pointer(va_list arg);
 
 int fo_reverse(va_list arg);
 int fo_rot13(va_list arg);
+int fo_space(va_list arg);
 char *convert(long int num, int base);
 
 

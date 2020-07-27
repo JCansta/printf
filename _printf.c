@@ -15,31 +15,33 @@ int _printf(const char *format, ...)
 	int contfor = 0, i = 0, contfunc = 0;
 	int (*fofu)(va_list);
 
+	if (format == NULL)
 	va_start(arg, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] != ' ')
+		if (format[i] == '%')
 		{
-			fofu = (*find_format)(&format[i + 1]);
-			if (fofu != NULL)
+			if (format[i + 1] != '%')
 			{
-				contfor++;
-				contfunc += (*fofu)(arg);
+				fofu = (*find_format)(&format[i + 1]);
+				if (fofu != NULL)
+				{
+					contfor++;
+					contfunc += (*fofu)(arg);
+				}
+				else
+				{
+					write(1, &format[i], 1);
+					write(1, &format[i + 1], 1);
+				}
+				i++;
 			}
-			else
-			{
-				write(1, &format[i], 1);
-				write(1, &format[i + 1], 1);
-			}
-			i++;
 		}
 		else
-		{
 			write(1, &format[i], 1);
-		}
 		i++;
 	}
 	i = i + contfunc - (contfor * 2);
 	va_end(arg);
 	return (i);
-			}
+}

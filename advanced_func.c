@@ -36,13 +36,9 @@ int fo_octal(va_list arg)
 {
 	char *num;
 	int count = 0;
-	int x;
+	unsigned long int x;
 
-	x = va_arg(arg, int);
-	if (x < 0)
-	{
-		x = -x;
-	}
+	x = va_arg(arg, unsigned long int);
 	num = convert(x, 8);
 	for (count = 0; num[count] != '\0'; count++)
 		write(1, &num[count], 1);

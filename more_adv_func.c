@@ -67,3 +67,15 @@ int fo_rot13(va_list arg)
 	}
 	return (count);
 }
+
+/**
+ * fo_space - if space do smth
+ * @arg: the parameter to be printed
+ * Return: the number of characters printed
+ */
+
+int fo_space(va_list arg)
+{
+	(void)arg;
+	return (0);
+}

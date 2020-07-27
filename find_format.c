@@ -25,6 +25,7 @@ int (*find_format(const char *c))(va_list)
 		{"p", fo_pointer},
 		{"r", fo_reverse},
 		{"R", fo_rot13},
+		{" ", fo_space},
 		{NULL, NULL}
 	};
 	int i = 0;

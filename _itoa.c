@@ -13,7 +13,7 @@ char *convert(long int num, int base)
 	static char buffer[50];
 	char sign = 0;
 	char *ptr;
-	unsigned int n = num;
+	unsigned long int n = num;
 
 	if (num < 0)
 	{

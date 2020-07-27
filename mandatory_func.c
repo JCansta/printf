@@ -12,7 +12,7 @@ int fo_char(va_list arg)
 	int resul;
 
 	c = va_arg(arg, int);
-	if (c == 0)
+	if (c == '\0')
 		return (0);
 	resul = write(1, &c, 1);
 	return (resul);
@@ -27,12 +27,16 @@ int fo_char(va_list arg)
 int fo_string(va_list arg)
 {
 	int count;
+	char *null = "(null)";
 	char *s;
 
 	s = va_arg(arg, char *);
-
 	if (s == NULL)
-		return (0);
+	{
+		for (count = 0; null[count] != '\0'; count++)
+			write(1, &null[count], 1);
+		return (count);
+	}
 	for (count = 0; s[count] != '\0'; count++)
 		write(1, &s[count], 1);
 
@@ -83,7 +87,7 @@ int fo_binari(va_list arg)
 	char *num;
 	int count = 0;
 
-	num = convert(va_arg(arg, int), 2);
+	num = convert(va_arg(arg, unsigned long int), 2);
 	for (count = 0; num[count] != '\0'; count++)
 		write(1, &num[count], 1);
 
