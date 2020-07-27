@@ -1,4 +1,4 @@
-# *Project to imitate the printf() command.
+B# *Project to imitate the printf() command.
 -----------------------
 ## Headers
 ```
@@ -56,6 +56,6 @@ if the return its succesful the function return the number of characters printed
 ## Contributors
 [- Mauricio Contreras](https://github.com/mauroxcf)
 [- Jaime Castro](https://github.com/JCansta)
-https://github.com/narnat
+
 ## Special thanks
 [credits to Farrukh Akhrarov "narnat" for the function itoa.](https://github.com/narnat)
